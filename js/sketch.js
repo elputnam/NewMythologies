@@ -1,3 +1,5 @@
+//Text only
+
 let myths = [];
 let i = 0;
 let mythFont;
@@ -12,15 +14,15 @@ var capturer = new CCapture({
 });
 
 function preload(){
-  mythFont = loadFont('data/RobotoMono-VariableFont_wght.ttf')
+  mythFont = loadFont('data/Monaco.ttf')
   myths = loadStrings('data/text_1.txt')
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1920, 1080);
   colorMode(HSB, 360, 100, 100, 100);
   i = int(random(myths.length));
   background(0);
-  frameRate(10);
+  //frameRate(0);
   textFont(mythFont);
 }
 
@@ -31,13 +33,14 @@ function draw() {
   //translate(-width/2, 0)
   background(0, 1);
   fill(100, 100, 100);
-  textSize(random(10,50));
+  textSize(random(30,60));
   textWrap(WORD);
   textAlign(CENTER);
+
   if (frameCount%40==0){
     text(myths[i], 0, y, width);
     i = int(random(myths.length)); 
-    y = y + 70; 
+    y = y + 100; 
   }
   if (y > height - 100){
     y = 50;
