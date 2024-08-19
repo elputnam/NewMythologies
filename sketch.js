@@ -51,6 +51,8 @@ function setup() {
 function draw() {
   background(0, 1);
   fill(100, 100, 100);
+
+  //AI text layout
   textSize(random(40,60));
   textWrap(WORD);
   textAlign(CENTER);
@@ -78,6 +80,7 @@ function draw() {
   push();
   translate(25, 40);
 
+  //Neural Net animations
   perceptron();
   simpleNeuron();
   complexNeuron();
