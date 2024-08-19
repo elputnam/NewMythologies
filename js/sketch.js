@@ -10,7 +10,7 @@ let y = 50;
 var capturer = new CCapture({
   format:'webm', 
   workersPath: 'js/',
-  framerate: 10
+  framerate: 60
 });
 
 function preload(){
@@ -22,7 +22,7 @@ function setup() {
   colorMode(HSB, 360, 100, 100, 100);
   i = int(random(myths.length));
   background(0);
-  //frameRate(0);
+  //frameRate(10);
   textFont(mythFont);
 }
 
@@ -33,7 +33,7 @@ function draw() {
   //translate(-width/2, 0)
   background(0, 1);
   fill(100, 100, 100);
-  textSize(random(30,60));
+  textSize(random(20,60));
   textWrap(WORD);
   textAlign(CENTER);
 
