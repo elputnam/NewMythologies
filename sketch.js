@@ -57,7 +57,7 @@ function draw() {
   textWrap(WORD);
   textAlign(CENTER);
   
-  if (frameCount%50==0){
+  if (frameCount%30==0){
     rectMode(CORNER);
     text(myths[i], 0, y, width);
     i = int(random(myths.length)); 
